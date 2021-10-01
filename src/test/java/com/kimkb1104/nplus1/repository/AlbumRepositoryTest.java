@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -40,7 +41,7 @@ class AlbumRepositoryTest {
     @Test
     @DisplayName("Solution 1) Use Join Fetch")
     void solution1() {
-        Set<Album> albums = albumRepository.findAllJoinFetch();
+        Collection<Album> albums = albumRepository.findAllJoinFetch();
         for (Album album : albums) {
             System.out.print("album : " + album.getId());
             System.out.println(", size : " + album.getSongs().size());
@@ -52,7 +53,7 @@ class AlbumRepositoryTest {
     @Test
     @DisplayName("Solution 2) Use @EntityGraph")
     void solution2() {
-        Set<Album> albums = albumRepository.findAllEntityGraph();
+        Collection<Album> albums = albumRepository.findAllEntityGraph();
         for (Album album : albums) {
             System.out.print("album : " + album.getId());
             System.out.println(", size : " + album.getSongs().size());

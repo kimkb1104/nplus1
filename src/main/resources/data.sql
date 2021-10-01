@@ -15,3 +15,6 @@ insert into song (id, album_id, length, title, track) values (10, 3, 302, '타�
 insert into song (id, album_id, length, title, track) values (11, 3, 303, '타이틀3-3', 3);
 insert into song (id, album_id, length, title, track) values (12, 3, 304, '타이틀3-4', 4);
 insert into song (id, album_id, length, title, track) values (13, 3, 305, '타이틀3-5', 5);
+
+insert into album (id, album_title, locales) values (4, '4집', 'kr');
+insert into album (id, album_title, locales) values (5, '5집', 'kr');
